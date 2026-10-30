@@ -1,0 +1,1 @@
+export const DOCUMENT_RELS = "word/_rels/document.xml.rels";
