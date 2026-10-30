@@ -1,5 +1,5 @@
 {
-  "name": "@ooxml-tools/wordprocessingml",
+  "name": "@ooxml-tools/docx",
   "version": "0.1.1",
   "exports": {
     ".": {
