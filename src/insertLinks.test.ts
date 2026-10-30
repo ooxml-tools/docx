@@ -10,7 +10,7 @@ describe("insertLinks", () => {
       test: "https://example.com",
     });
     expect(links).toEqual({
-      test: "rId7"
+      test: "rId8"
     });
 
     const fileContents = await doc.readFile(DOCUMENT_RELS, "text");
@@ -25,8 +25,8 @@ describe("insertLinks", () => {
       test2: "https://example.com/test2",
     });
     expect(links).toEqual({
-      test1: "rId7",
-      test2: "rId8"
+      test1: "rId8",
+      test2: "rId9"
     });
     
     const fileContents = await doc.readFile(DOCUMENT_RELS, "text");
@@ -42,8 +42,8 @@ describe("insertLinks", () => {
       test2: "https://example.com",
     });
     expect(links).toEqual({
-      test1: "rId7",
-      test2: "rId7"
+      test1: "rId8",
+      test2: "rId8"
     });
 
     const fileContents = await doc.readFile(DOCUMENT_RELS, "text");

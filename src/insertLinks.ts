@@ -23,7 +23,7 @@ function getLargestId(idMap: { id: string, url: string }[]) {
         .filter(Number.isFinite)
 
     return Math.max(
-        1,
+        0,
         ...allRIds
     );
 }
@@ -63,8 +63,6 @@ export async function insertLinks<T extends Record<string, string>>(
         string
     >;
 
-    let currentId = getLargestId(existingUrls);
-
     Object.entries(links).forEach(([key, url]) => {
         // Check if the URL is already present in the existing IDs
         const existingUrl = existingUrls.find(item => item.url === url);
@@ -72,8 +70,8 @@ export async function insertLinks<T extends Record<string, string>>(
             output[key as keyof T] = existingUrl.id;
             return;
         }
-
-        const id = "rId" + currentId++;
+        const currentId = getLargestId(existingUrls)+1;
+        const id = "rId" + currentId;
         existingUrls.push({ id, url });
         output[key as keyof T] = id;
 
