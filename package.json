@@ -45,7 +45,7 @@
     "rollup-plugin-preserve-shebang": "^1.0.1",
     "rollup-plugin-typescript-paths": "^1.5.0",
     "ts-node": "^10.9.2",
-    "tslib": "^2.6.3",
+    "tslib": "^2.9.1",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
     "vitest": "^4.1.8"
